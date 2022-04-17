@@ -12,6 +12,9 @@
 		E9325957280C058B00199960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9325956280C058B00199960 /* Assets.xcassets */; };
 		E932595A280C058B00199960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9325958280C058B00199960 /* LaunchScreen.storyboard */; };
 		E9325964280C0A9100199960 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9325963280C0A9100199960 /* MainViewController.swift */; };
+		E932596D280C0DF300199960 /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = E932596C280C0DF300199960 /* Reusable */; };
+		E9325970280C0E5400199960 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E932596F280C0E5400199960 /* SnapKit */; };
+		E9325973280C1B3800199960 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9325972280C1B3800199960 /* BlueButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,7 @@
 		E9325959280C058B00199960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E932595B280C058B00199960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9325963280C0A9100199960 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E9325972280C1B3800199960 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E932596D280C0DF300199960 /* Reusable in Frameworks */,
+				E9325970280C0E5400199960 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,8 +90,17 @@
 		E9325965280C0B9100199960 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E9325971280C1A5400199960 /* Buttons */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		E9325971280C1A5400199960 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				E9325972280C1B3800199960 /* BlueButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +119,10 @@
 			dependencies = (
 			);
 			name = "UIKit-Helper";
+			packageProductDependencies = (
+				E932596C280C0DF300199960 /* Reusable */,
+				E932596F280C0E5400199960 /* SnapKit */,
+			);
 			productName = "UIKit-Helper";
 			productReference = E932594A280C058A00199960 /* UIKit-Helper.app */;
 			productType = "com.apple.product-type.application";
@@ -132,6 +151,10 @@
 				Base,
 			);
 			mainGroup = E9325941280C058A00199960;
+			packageReferences = (
+				E932596B280C0DF300199960 /* XCRemoteSwiftPackageReference "Reusable" */,
+				E932596E280C0E5400199960 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = E932594B280C058A00199960 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -161,6 +184,7 @@
 				E9325964280C0A9100199960 /* MainViewController.swift in Sources */,
 				E932594E280C058A00199960 /* AppDelegate.swift in Sources */,
 				E9325950280C058A00199960 /* SceneDelegate.swift in Sources */,
+				E9325973280C1B3800199960 /* BlueButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +392,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E932596B280C0DF300199960 /* XCRemoteSwiftPackageReference "Reusable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/Reusable.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		E932596E280C0E5400199960 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E932596C280C0DF300199960 /* Reusable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E932596B280C0DF300199960 /* XCRemoteSwiftPackageReference "Reusable" */;
+			productName = Reusable;
+		};
+		E932596F280C0E5400199960 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E932596E280C0E5400199960 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E9325942280C058A00199960 /* Project object */;
 }
