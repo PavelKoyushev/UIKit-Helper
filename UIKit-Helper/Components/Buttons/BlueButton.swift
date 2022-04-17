@@ -26,7 +26,7 @@ class BlueButton: UIButton {
 private extension BlueButton {
     
     func configure() {
-        backgroundColor = .blue
+        backgroundColor = .systemCyan
         setTitleColor(.white, for: .normal)
         
         titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)

@@ -9,11 +9,38 @@ import UIKit
 import SnapKit
 
 class MainViewController: UIViewController {
+    
+    var oneButton = BlueButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        configureUI()
+    }
+}
+
+extension MainViewController {
+    
+    func configureUI() {
+        
+        configureButtons()
+        makeConstraints()
     }
     
+    func configureButtons() {
+        
+        oneButton.setTitle("Diffable Data Source", for: .normal)
+        
+        view.addSubview(oneButton)
+    }
+    
+    func makeConstraints() {
+        
+        oneButton.snp.makeConstraints {
+            $0.center.equalToSuperview()
+            $0.height.equalTo(40)
+            $0.horizontalEdges.equalToSuperview().inset(45)
+        }
+    }
 }
