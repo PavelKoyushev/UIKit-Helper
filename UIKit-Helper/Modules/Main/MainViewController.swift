@@ -31,6 +31,7 @@ extension MainViewController {
     func configureButtons() {
         
         oneButton.setTitle("Diffable Data Source", for: .normal)
+        oneButton.addTarget(self, action: #selector(routeToDDSView), for: .touchUpInside)
         
         view.addSubview(oneButton)
     }
@@ -42,5 +43,12 @@ extension MainViewController {
             $0.height.equalTo(40)
             $0.horizontalEdges.equalToSuperview().inset(45)
         }
+    }
+    
+    @objc func routeToDDSView() {
+        
+        let viewController = ExampleDDSViewController()
+        
+        present(viewController, animated: true)
     }
 }

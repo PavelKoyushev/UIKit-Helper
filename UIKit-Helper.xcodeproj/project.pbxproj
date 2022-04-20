@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9247F1828108F17007212A9 /* ExampleDDSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9247F1728108F17007212A9 /* ExampleDDSViewController.swift */; };
+		E9247F1D28109DAA007212A9 /* CellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9247F1C28109DAA007212A9 /* CellBuilder.swift */; };
 		E932594E280C058A00199960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E932594D280C058A00199960 /* AppDelegate.swift */; };
 		E9325950280C058A00199960 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E932594F280C058A00199960 /* SceneDelegate.swift */; };
 		E9325957280C058B00199960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9325956280C058B00199960 /* Assets.xcassets */; };
@@ -15,9 +17,12 @@
 		E932596D280C0DF300199960 /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = E932596C280C0DF300199960 /* Reusable */; };
 		E9325970280C0E5400199960 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E932596F280C0E5400199960 /* SnapKit */; };
 		E9325973280C1B3800199960 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9325972280C1B3800199960 /* BlueButton.swift */; };
+		E9803A87280DD4EE0097C70E /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9803A86280DD4EE0097C70E /* ContactTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E9247F1728108F17007212A9 /* ExampleDDSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleDDSViewController.swift; sourceTree = "<group>"; };
+		E9247F1C28109DAA007212A9 /* CellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBuilder.swift; sourceTree = "<group>"; };
 		E932594A280C058A00199960 /* UIKit-Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKit-Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E932594D280C058A00199960 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E932594F280C058A00199960 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		E932595B280C058B00199960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9325963280C0A9100199960 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E9325972280C1B3800199960 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
+		E9803A86280DD4EE0097C70E /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E9247F1928108F23007212A9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E9325963280C0A9100199960 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E9247F1A28108F2C007212A9 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				E9247F1728108F17007212A9 /* ExampleDDSViewController.swift */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		E9247F1B28109D93007212A9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E9247F1C28109DAA007212A9 /* CellBuilder.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		E9325941280C058A00199960 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +93,7 @@
 				E9325961280C098C00199960 /* App */,
 				E9325962280C0A7900199960 /* Modules */,
 				E9325965280C0B9100199960 /* Components */,
+				E9247F1B28109D93007212A9 /* Helpers */,
 				E9325958280C058B00199960 /* LaunchScreen.storyboard */,
 				E932595B280C058B00199960 /* Info.plist */,
 			);
@@ -82,7 +113,8 @@
 		E9325962280C0A7900199960 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E9325963280C0A9100199960 /* MainViewController.swift */,
+				E9247F1928108F23007212A9 /* Main */,
+				E9247F1A28108F2C007212A9 /* Examples */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -90,6 +122,7 @@
 		E9325965280C0B9100199960 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E9803A85280DD4D20097C70E /* Cells */,
 				E9325971280C1A5400199960 /* Buttons */,
 			);
 			path = Components;
@@ -101,6 +134,14 @@
 				E9325972280C1B3800199960 /* BlueButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		E9803A85280DD4D20097C70E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E9803A86280DD4EE0097C70E /* ContactTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,8 +223,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9325964280C0A9100199960 /* MainViewController.swift in Sources */,
+				E9803A87280DD4EE0097C70E /* ContactTableViewCell.swift in Sources */,
 				E932594E280C058A00199960 /* AppDelegate.swift in Sources */,
+				E9247F1828108F17007212A9 /* ExampleDDSViewController.swift in Sources */,
 				E9325950280C058A00199960 /* SceneDelegate.swift in Sources */,
+				E9247F1D28109DAA007212A9 /* CellBuilder.swift in Sources */,
 				E9325973280C1B3800199960 /* BlueButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
