@@ -18,6 +18,7 @@
 		E9325970280C0E5400199960 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E932596F280C0E5400199960 /* SnapKit */; };
 		E9325973280C1B3800199960 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9325972280C1B3800199960 /* BlueButton.swift */; };
 		E9803A87280DD4EE0097C70E /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9803A86280DD4EE0097C70E /* ContactTableViewCell.swift */; };
+		E9F26CAB2820114500A2DD79 /* CompositionalLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F26CAA2820114500A2DD79 /* CompositionalLayoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E9325963280C0A9100199960 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E9325972280C1B3800199960 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
 		E9803A86280DD4EE0097C70E /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		E9F26CAA2820114500A2DD79 /* CompositionalLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				E9247F1728108F17007212A9 /* ExampleDDSViewController.swift */,
+				E9F26CAA2820114500A2DD79 /* CompositionalLayoutViewController.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F26CAB2820114500A2DD79 /* CompositionalLayoutViewController.swift in Sources */,
 				E9325964280C0A9100199960 /* MainViewController.swift in Sources */,
 				E9803A87280DD4EE0097C70E /* ContactTableViewCell.swift in Sources */,
 				E932594E280C058A00199960 /* AppDelegate.swift in Sources */,
