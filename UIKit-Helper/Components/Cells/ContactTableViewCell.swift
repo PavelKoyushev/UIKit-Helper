@@ -13,7 +13,7 @@ struct ContactTableViewCellModel {
     let grade: String
 }
 
-class ContactTableViewCell: UITableViewCell, CodeCellConfigurable {
+final class ContactTableViewCell: UITableViewCell, CodeCellConfigurable {
     
     let nameLabel: UILabel = {
         let label = UILabel()
@@ -49,19 +49,19 @@ class ContactTableViewCell: UITableViewCell, CodeCellConfigurable {
 
 private extension ContactTableViewCell {
     
-    private func configureUI() {
+    func configureUI() {
         
         configureLabels()
         makeConstraints()
     }
     
-    private func configureLabels() {
+    func configureLabels() {
         
         contentView.addSubview(nameLabel)
         contentView.addSubview(gradeLabel)
     }
     
-    private func makeConstraints() {
+    func makeConstraints() {
         
         nameLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(16)
@@ -74,7 +74,6 @@ private extension ContactTableViewCell {
             $0.bottom.equalToSuperview().inset(12)
         }
     }
-    
     
 }
 

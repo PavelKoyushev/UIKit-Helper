@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BlueButton: UIButton {
+final class BlueButton: UIButton {
 
     private let cornerRadius: CGFloat = 10.0
     

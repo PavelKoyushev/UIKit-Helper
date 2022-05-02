@@ -8,11 +8,11 @@
 import UIKit
 import SnapKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
     
-    var oneButton = BlueButton()
+    private var oneButton = BlueButton()
     
-    var twoButton = BlueButton()
+    private var twoButton = BlueButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController {
+private extension MainViewController {
     
     func configureUI() {
         
@@ -36,6 +36,7 @@ extension MainViewController {
         oneButton.addTarget(self, action: #selector(routeToDDSView), for: .touchUpInside)
         
         twoButton.setTitle("CollectionView Compositional Layout", for: .normal)
+        twoButton.addTarget(self, action: #selector(routeToPhotoCollectionView), for: .touchUpInside)
         
         view.addSubview(oneButton)
         view.addSubview(twoButton)
@@ -56,9 +57,20 @@ extension MainViewController {
         }
     }
     
+}
+
+private extension MainViewController {
+    
     @objc func routeToDDSView() {
         
         let viewController = ExampleDDSViewController()
+        
+        present(viewController, animated: true)
+    }
+    
+    @objc func routeToPhotoCollectionView() {
+        
+        let viewController = CompositionalLayoutViewController()
         
         present(viewController, animated: true)
     }

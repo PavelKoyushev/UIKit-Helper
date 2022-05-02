@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ExampleDDSViewController: UIViewController {
+final class ExampleDDSViewController: UIViewController {
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -17,14 +17,7 @@ class ExampleDDSViewController: UIViewController {
     }()
     
     enum Section {
-        
         case developers
-    }
-    
-    struct Developer: Hashable {
-        
-        let name: String
-        let grade: String
     }
     
     private let developers = [
@@ -39,14 +32,14 @@ class ExampleDDSViewController: UIViewController {
         super.viewDidLoad()
 
         configureUI()
-        configureDataSource()
         
+        configureDataSource()
         createSnapshot(data: developers)
     }
 
 }
 
-extension ExampleDDSViewController {
+private extension ExampleDDSViewController {
     
     func configureUI() {
         
@@ -67,7 +60,7 @@ extension ExampleDDSViewController {
     }
 }
 
-extension ExampleDDSViewController {
+private extension ExampleDDSViewController {
     
     func configureDataSource(){
         

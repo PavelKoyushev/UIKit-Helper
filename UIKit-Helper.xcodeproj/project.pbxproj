@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E9247F1828108F17007212A9 /* ExampleDDSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9247F1728108F17007212A9 /* ExampleDDSViewController.swift */; };
 		E9247F1D28109DAA007212A9 /* CellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9247F1C28109DAA007212A9 /* CellBuilder.swift */; };
+		E9295DBD28204A4E007A83F0 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9295DBC28204A4E007A83F0 /* Developer.swift */; };
+		E9295DBF28204A74007A83F0 /* CaliforniaImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9295DBE28204A74007A83F0 /* CaliforniaImage.swift */; };
 		E932594E280C058A00199960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E932594D280C058A00199960 /* AppDelegate.swift */; };
 		E9325950280C058A00199960 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E932594F280C058A00199960 /* SceneDelegate.swift */; };
 		E9325957280C058B00199960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9325956280C058B00199960 /* Assets.xcassets */; };
@@ -19,11 +21,15 @@
 		E9325973280C1B3800199960 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9325972280C1B3800199960 /* BlueButton.swift */; };
 		E9803A87280DD4EE0097C70E /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9803A86280DD4EE0097C70E /* ContactTableViewCell.swift */; };
 		E9F26CAB2820114500A2DD79 /* CompositionalLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F26CAA2820114500A2DD79 /* CompositionalLayoutViewController.swift */; };
+		E9F26CAD282015CE00A2DD79 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F26CAC282015CE00A2DD79 /* PhotoCollectionViewCell.swift */; };
+		E9F26CB0282016AA00A2DD79 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = E9F26CAF282016AA00A2DD79 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E9247F1728108F17007212A9 /* ExampleDDSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleDDSViewController.swift; sourceTree = "<group>"; };
 		E9247F1C28109DAA007212A9 /* CellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBuilder.swift; sourceTree = "<group>"; };
+		E9295DBC28204A4E007A83F0 /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
+		E9295DBE28204A74007A83F0 /* CaliforniaImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaliforniaImage.swift; sourceTree = "<group>"; };
 		E932594A280C058A00199960 /* UIKit-Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKit-Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E932594D280C058A00199960 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E932594F280C058A00199960 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +40,7 @@
 		E9325972280C1B3800199960 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
 		E9803A86280DD4EE0097C70E /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		E9F26CAA2820114500A2DD79 /* CompositionalLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutViewController.swift; sourceTree = "<group>"; };
+		E9F26CAC282015CE00A2DD79 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +49,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E932596D280C0DF300199960 /* Reusable in Frameworks */,
+				E9F26CB0282016AA00A2DD79 /* Then in Frameworks */,
 				E9325970280C0E5400199960 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +82,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		E9295DBB28204A3E007A83F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E9295DBC28204A4E007A83F0 /* Developer.swift */,
+				E9295DBE28204A74007A83F0 /* CaliforniaImage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E9325941280C058A00199960 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				E9325961280C098C00199960 /* App */,
+				E9295DBB28204A3E007A83F0 /* Models */,
 				E9325962280C0A7900199960 /* Modules */,
 				E9325965280C0B9100199960 /* Components */,
 				E9247F1B28109D93007212A9 /* Helpers */,
@@ -143,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				E9803A86280DD4EE0097C70E /* ContactTableViewCell.swift */,
+				E9F26CAC282015CE00A2DD79 /* PhotoCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -166,6 +185,7 @@
 			packageProductDependencies = (
 				E932596C280C0DF300199960 /* Reusable */,
 				E932596F280C0E5400199960 /* SnapKit */,
+				E9F26CAF282016AA00A2DD79 /* Then */,
 			);
 			productName = "UIKit-Helper";
 			productReference = E932594A280C058A00199960 /* UIKit-Helper.app */;
@@ -198,6 +218,7 @@
 			packageReferences = (
 				E932596B280C0DF300199960 /* XCRemoteSwiftPackageReference "Reusable" */,
 				E932596E280C0E5400199960 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				E9F26CAE282016AA00A2DD79 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = E932594B280C058A00199960 /* Products */;
 			projectDirPath = "";
@@ -230,6 +251,9 @@
 				E9803A87280DD4EE0097C70E /* ContactTableViewCell.swift in Sources */,
 				E932594E280C058A00199960 /* AppDelegate.swift in Sources */,
 				E9247F1828108F17007212A9 /* ExampleDDSViewController.swift in Sources */,
+				E9295DBF28204A74007A83F0 /* CaliforniaImage.swift in Sources */,
+				E9F26CAD282015CE00A2DD79 /* PhotoCollectionViewCell.swift in Sources */,
+				E9295DBD28204A4E007A83F0 /* Developer.swift in Sources */,
 				E9325950280C058A00199960 /* SceneDelegate.swift in Sources */,
 				E9247F1D28109DAA007212A9 /* CellBuilder.swift in Sources */,
 				E9325973280C1B3800199960 /* BlueButton.swift in Sources */,
@@ -458,6 +482,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		E9F26CAE282016AA00A2DD79 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -470,6 +502,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E932596E280C0E5400199960 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		E9F26CAF282016AA00A2DD79 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9F26CAE282016AA00A2DD79 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
