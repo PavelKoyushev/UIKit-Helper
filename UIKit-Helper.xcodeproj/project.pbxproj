@@ -19,7 +19,11 @@
 		E932596D280C0DF300199960 /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = E932596C280C0DF300199960 /* Reusable */; };
 		E9325970280C0E5400199960 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E932596F280C0E5400199960 /* SnapKit */; };
 		E9325973280C1B3800199960 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9325972280C1B3800199960 /* BlueButton.swift */; };
+		E9653F5028BCDD130027497B /* MainTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9653F4F28BCDD130027497B /* MainTextView.swift */; };
+		E9653F5228BCDE2A0027497B /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9653F5128BCDE2A0027497B /* UIKitViewController.swift */; };
+		E9653F5528BCE7A90027497B /* AppSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9653F5428BCE7A90027497B /* AppSlider.swift */; };
 		E9803A87280DD4EE0097C70E /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9803A86280DD4EE0097C70E /* ContactTableViewCell.swift */; };
+		E9873F9228BCC79700F6525D /* MainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9873F9128BCC79700F6525D /* MainTextField.swift */; };
 		E9F26CAB2820114500A2DD79 /* CompositionalLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F26CAA2820114500A2DD79 /* CompositionalLayoutViewController.swift */; };
 		E9F26CAD282015CE00A2DD79 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F26CAC282015CE00A2DD79 /* PhotoCollectionViewCell.swift */; };
 		E9F26CB0282016AA00A2DD79 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = E9F26CAF282016AA00A2DD79 /* Then */; };
@@ -38,7 +42,11 @@
 		E932595B280C058B00199960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9325963280C0A9100199960 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E9325972280C1B3800199960 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
+		E9653F4F28BCDD130027497B /* MainTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextView.swift; sourceTree = "<group>"; };
+		E9653F5128BCDE2A0027497B /* UIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
+		E9653F5428BCE7A90027497B /* AppSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSlider.swift; sourceTree = "<group>"; };
 		E9803A86280DD4EE0097C70E /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		E9873F9128BCC79700F6525D /* MainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextField.swift; sourceTree = "<group>"; };
 		E9F26CAA2820114500A2DD79 /* CompositionalLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutViewController.swift; sourceTree = "<group>"; };
 		E9F26CAC282015CE00A2DD79 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +78,7 @@
 			children = (
 				E9247F1728108F17007212A9 /* ExampleDDSViewController.swift */,
 				E9F26CAA2820114500A2DD79 /* CompositionalLayoutViewController.swift */,
+				E9653F5128BCDE2A0027497B /* UIKitViewController.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -143,8 +152,11 @@
 		E9325965280C0B9100199960 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				E9803A85280DD4D20097C70E /* Cells */,
+				E9653F5328BCE7850027497B /* Slider */,
 				E9325971280C1A5400199960 /* Buttons */,
+				E9803A85280DD4D20097C70E /* Cells */,
+				E9873F9028BCC72B00F6525D /* TextFields */,
+				E9653F4E28BCDCF20027497B /* TextViews */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -157,6 +169,22 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		E9653F4E28BCDCF20027497B /* TextViews */ = {
+			isa = PBXGroup;
+			children = (
+				E9653F4F28BCDD130027497B /* MainTextView.swift */,
+			);
+			path = TextViews;
+			sourceTree = "<group>";
+		};
+		E9653F5328BCE7850027497B /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				E9653F5428BCE7A90027497B /* AppSlider.swift */,
+			);
+			path = Slider;
+			sourceTree = "<group>";
+		};
 		E9803A85280DD4D20097C70E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +192,14 @@
 				E9F26CAC282015CE00A2DD79 /* PhotoCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		E9873F9028BCC72B00F6525D /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				E9873F9128BCC79700F6525D /* MainTextField.swift */,
+			);
+			path = TextFields;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,10 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9873F9228BCC79700F6525D /* MainTextField.swift in Sources */,
+				E9653F5028BCDD130027497B /* MainTextView.swift in Sources */,
 				E9F26CAB2820114500A2DD79 /* CompositionalLayoutViewController.swift in Sources */,
+				E9653F5228BCDE2A0027497B /* UIKitViewController.swift in Sources */,
 				E9325964280C0A9100199960 /* MainViewController.swift in Sources */,
 				E9803A87280DD4EE0097C70E /* ContactTableViewCell.swift in Sources */,
 				E932594E280C058A00199960 /* AppDelegate.swift in Sources */,
+				E9653F5528BCE7A90027497B /* AppSlider.swift in Sources */,
 				E9247F1828108F17007212A9 /* ExampleDDSViewController.swift in Sources */,
 				E9295DBF28204A74007A83F0 /* CaliforniaImage.swift in Sources */,
 				E9F26CAD282015CE00A2DD79 /* PhotoCollectionViewCell.swift in Sources */,

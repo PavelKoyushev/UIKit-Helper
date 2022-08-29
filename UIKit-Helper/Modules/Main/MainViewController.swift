@@ -13,6 +13,8 @@ final class MainViewController: UIViewController {
     private var oneButton = BlueButton()
     
     private var twoButton = BlueButton()
+    
+    private var threeButton = BlueButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +40,12 @@ private extension MainViewController {
         twoButton.setTitle("CollectionView Compositional Layout", for: .normal)
         twoButton.addTarget(self, action: #selector(routeToPhotoCollectionView), for: .touchUpInside)
         
+        threeButton.setTitle("UIKit", for: .normal)
+        threeButton.addTarget(self, action: #selector(routeToUIKitViewController), for: .touchUpInside)
+        
         view.addSubview(oneButton)
         view.addSubview(twoButton)
+        view.addSubview(threeButton)
     }
     
     func makeConstraints() {
@@ -55,8 +61,13 @@ private extension MainViewController {
             $0.height.equalTo(40)
             $0.horizontalEdges.equalToSuperview().inset(45)
         }
+        
+        threeButton.snp.makeConstraints {
+            $0.top.equalTo(twoButton.snp.bottom).offset(20)
+            $0.height.equalTo(40)
+            $0.horizontalEdges.equalToSuperview().inset(45)
+        }
     }
-    
 }
 
 private extension MainViewController {
@@ -71,6 +82,13 @@ private extension MainViewController {
     @objc func routeToPhotoCollectionView() {
         
         let viewController = CompositionalLayoutViewController()
+        
+        present(viewController, animated: true)
+    }
+    
+    @objc func routeToUIKitViewController() {
+        
+        let viewController = UIKitViewController()
         
         present(viewController, animated: true)
     }
