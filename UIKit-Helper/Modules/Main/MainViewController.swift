@@ -88,7 +88,7 @@ private extension MainViewController {
         
         let viewController = ExampleDDSViewController()
         
-        present(viewController, animated: true)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc func routeToPhotoCollectionView() {

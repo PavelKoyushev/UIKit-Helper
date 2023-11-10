@@ -16,14 +16,14 @@ struct ProductCellModel {
 
 final class ProductCollectionViewCell: UICollectionViewCell, CodeCellConfigurable {
     
-    let imageView: UIImageView = {
+    private let imageView: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(systemName: "map")
         view.backgroundColor = .lightGray
         return view
     }()
     
-    let titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Pizza"
         label.textColor = .black
@@ -31,7 +31,7 @@ final class ProductCollectionViewCell: UICollectionViewCell, CodeCellConfigurabl
         return label
     }()
     
-    let priceLabel: UILabel = {
+    private let priceLabel: UILabel = {
         let label = UILabel()
         label.text = "100"
         label.textColor = .black
@@ -42,18 +42,15 @@ final class ProductCollectionViewCell: UICollectionViewCell, CodeCellConfigurabl
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        configureUI()
+        makeConstraints()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureCell(with model: ProductCellModel) {
-        
-        imageView.image = UIImage(named: model.image)
-        titleLabel.text = model.title
-        priceLabel.text = String(model.price) + " ₽"
+    override func layoutSubviews() {
+        configureUI()
     }
     
     override func prepareForReuse() {
@@ -63,24 +60,21 @@ final class ProductCollectionViewCell: UICollectionViewCell, CodeCellConfigurabl
         titleLabel.text = nil
         priceLabel.text = nil
     }
+    
+    func configureCell(with model: ProductCellModel) {
+        
+        imageView.image = UIImage(named: model.image)
+        titleLabel.text = model.title
+        priceLabel.text = String(model.price) + " ₽"
+    }
 }
 
 private extension ProductCollectionViewCell {
     
-    func configureUI() {
-        contentView.backgroundColor = .white
-        configureViews()
-        makeConstraints()
-    }
-    
-    func configureViews() {
-        
+    func makeConstraints() {
         contentView.addSubview(imageView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(priceLabel)
-    }
-    
-    func makeConstraints() {
         
         imageView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(10)
@@ -97,6 +91,13 @@ private extension ProductCollectionViewCell {
             $0.top.equalTo(titleLabel.snp.bottom).offset(8)
             $0.leading.equalToSuperview().offset(10)
             $0.bottom.equalToSuperview().inset(10)
+        }
+    }
+    
+    func configureUI() {
+        
+        contentView.do {
+            $0.backgroundColor = .white
         }
     }
 }

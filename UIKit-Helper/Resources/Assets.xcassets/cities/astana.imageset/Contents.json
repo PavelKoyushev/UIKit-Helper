@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "astana.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

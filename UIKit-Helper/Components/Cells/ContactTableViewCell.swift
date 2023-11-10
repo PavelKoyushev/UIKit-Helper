@@ -15,19 +15,12 @@ struct ContactTableViewCellModel {
 
 final class ContactTableViewCell: UITableViewCell, CodeCellConfigurable {
     
-    let nameLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
-    
-    let gradeLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
+    private lazy var nameLabel = UILabel()
+    private lazy var gradeLabel = UILabel()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        configureUI()
+        makeConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -49,19 +42,10 @@ final class ContactTableViewCell: UITableViewCell, CodeCellConfigurable {
 
 private extension ContactTableViewCell {
     
-    func configureUI() {
-        
-        configureLabels()
-        makeConstraints()
-    }
-    
-    func configureLabels() {
+    func makeConstraints() {
         
         contentView.addSubview(nameLabel)
         contentView.addSubview(gradeLabel)
-    }
-    
-    func makeConstraints() {
         
         nameLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(16)
@@ -74,7 +58,6 @@ private extension ContactTableViewCell {
             $0.bottom.equalToSuperview().inset(12)
         }
     }
-    
 }
 
 #if DEBUG

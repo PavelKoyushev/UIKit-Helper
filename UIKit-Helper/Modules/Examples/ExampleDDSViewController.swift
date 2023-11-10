@@ -16,7 +16,7 @@ final class ExampleDDSViewController: UIViewController {
         return tableView
     }()
     
-    enum Section {
+    private enum Section {
         case developers
     }
     

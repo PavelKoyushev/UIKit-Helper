@@ -6,12 +6,20 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RxFlow
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    
+    let coordinator = FlowCoordinator()
+    var appFlow: AppFlow!
+    private var activeStepper: ActiveStepper!
+    
+    private let disposeBag = DisposeBag()
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -20,7 +28,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
-        window?.rootViewController = MainViewController()
+        
+        guard let window = self.window else { return }
+        
+        self.activeStepper = ActiveStepper()
+        
+        appFlow = AppFlow(withWindow: window,
+                          activeStepper: activeStepper)
+        
+        coordinator.rx.didNavigate
+            .subscribe(onNext: { flow, step in
+                print("did navigate to flow=\(flow) and step=\(step)")
+            }).disposed(by: disposeBag)
+        
+        self.coordinator.coordinate(flow: appFlow, with: activeStepper)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -50,7 +71,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
-
