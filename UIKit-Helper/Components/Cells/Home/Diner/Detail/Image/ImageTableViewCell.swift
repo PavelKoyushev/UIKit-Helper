@@ -38,7 +38,7 @@ private extension ImageTableViewCell {
         
         imgView.snp.makeConstraints {
             $0.verticalEdges.equalToSuperview()
-            $0.horizontalEdges.equalToSuperview().inset(16)
+            $0.horizontalEdges.equalToSuperview()
             $0.height.equalTo(UIScreen.main.bounds.width / 1.7)
         }
     }
