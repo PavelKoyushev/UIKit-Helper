@@ -7,12 +7,6 @@
 
 import UIKit
 
-struct ContactTableViewCellModel {
-    
-    let name: String
-    let grade: String
-}
-
 final class ContactTableViewCell: UITableViewCell, CodeCellConfigurable {
     
     private lazy var nameLabel = UILabel()

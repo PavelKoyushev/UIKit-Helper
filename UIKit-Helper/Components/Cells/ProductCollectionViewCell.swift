@@ -7,13 +7,6 @@
 
 import UIKit
 
-struct ProductCellModel {
-    
-    let image: String
-    let title: String
-    let price: Double
-}
-
 final class ProductCollectionViewCell: UICollectionViewCell, CodeCellConfigurable {
     
     private let imageView: UIImageView = {

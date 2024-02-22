@@ -9,64 +9,6 @@ import UIKit
 import RxDataSources
 import RxCocoa
 
-protocol TitleButtonCellProtocol {
-    
-    var title: String { get }
-    var step: AppStep { get }
-}
-
-struct TitleButtonCellModel: TitleButtonCellProtocol {
-    
-    let title: String
-    let step: AppStep
-}
-
-protocol BestGuideProtocol {
-    
-    var name: String { get }
-    var photo: String { get }
-}
-
-struct BestGuide: BestGuideProtocol {
-    
-    let name: String
-    let photo: String
-    let info: String
-}
-
-protocol DinerCellProtocol {
-    
-    var title: String { get }
-    var subtitle: String { get }
-    var image: String { get }
-    var rating: Int { get }
-}
-
-struct Diner: DinerCellProtocol {
-    
-    let title: String
-    let subtitle: String
-    let image: String
-    let description: String
-    let rating: Int
-}
-
-protocol PromoCityCellProtocol {
-    
-    var city: String { get }
-    var country: String { get }
-    var imageName: String { get }
-}
-
-struct PromoTourModel: PromoCityCellProtocol {
-    
-    let city: String
-    let country: String
-    let imageName: String
-    
-    let description: String
-}
-
 enum HomeScreenItem {
     
     case promoCity(model: [PromoTourModel])
@@ -101,7 +43,6 @@ final class HomeScreenDataSource {
                                                                    indexPath: indexPath,
                                                                    model: model)
         }
-        
     }
 }
 
@@ -145,5 +86,4 @@ struct HomeScreenBuilder {
         
         return sections
     }
-    
 }

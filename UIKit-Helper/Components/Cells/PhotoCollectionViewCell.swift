@@ -8,11 +8,6 @@
 import UIKit
 import Then
 
-struct PhotoCollectionViewCellModel {
-    
-    let image: String
-}
-
 final class PhotoCollectionViewCell: UICollectionViewCell, CodeCellConfigurable {
     
     private let imageView = UIImageView().then {
