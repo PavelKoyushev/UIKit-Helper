@@ -35,6 +35,7 @@
 		E9653F5028BCDD130027497B /* MainTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9653F4F28BCDD130027497B /* MainTextView.swift */; };
 		E9653F5228BCDE2A0027497B /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9653F5128BCDE2A0027497B /* UIKitViewController.swift */; };
 		E9653F5528BCE7A90027497B /* AppSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9653F5428BCE7A90027497B /* AppSlider.swift */; };
+		E96735352B87CFAE004409C5 /* MembershipStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96735342B87CFAE004409C5 /* MembershipStatusTableViewCell.swift */; };
 		E96735392B87D863004409C5 /* TitleButtonCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96735382B87D863004409C5 /* TitleButtonCellModel.swift */; };
 		E967353B2B87D898004409C5 /* BestGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = E967353A2B87D898004409C5 /* BestGuide.swift */; };
 		E967353E2B87D8F0004409C5 /* Diner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E967353D2B87D8F0004409C5 /* Diner.swift */; };
@@ -70,6 +71,7 @@
 		E9DA731C2AEBA8EC005A8C24 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA731B2AEBA8EC005A8C24 /* StoreViewModel.swift */; };
 		E9DA731E2AEBAA7F005A8C24 /* StoreFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA731D2AEBAA7F005A8C24 /* StoreFlow.swift */; };
 		E9DA73212AEC27CA005A8C24 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA73202AEC27CA005A8C24 /* RatingView.swift */; };
+		E9EC2FEA2B890EF900604F22 /* MembershipStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC2FE92B890EF900604F22 /* MembershipStatus.swift */; };
 		E9F26CAB2820114500A2DD79 /* CompositionalLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F26CAA2820114500A2DD79 /* CompositionalLayoutViewController.swift */; };
 		E9F26CAD282015CE00A2DD79 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F26CAC282015CE00A2DD79 /* PhotoCollectionViewCell.swift */; };
 		E9F26CB0282016AA00A2DD79 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = E9F26CAF282016AA00A2DD79 /* Then */; };
@@ -104,6 +106,7 @@
 		E9653F4F28BCDD130027497B /* MainTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextView.swift; sourceTree = "<group>"; };
 		E9653F5128BCDE2A0027497B /* UIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
 		E9653F5428BCE7A90027497B /* AppSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSlider.swift; sourceTree = "<group>"; };
+		E96735342B87CFAE004409C5 /* MembershipStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipStatusTableViewCell.swift; sourceTree = "<group>"; };
 		E96735382B87D863004409C5 /* TitleButtonCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleButtonCellModel.swift; sourceTree = "<group>"; };
 		E967353A2B87D898004409C5 /* BestGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestGuide.swift; sourceTree = "<group>"; };
 		E967353D2B87D8F0004409C5 /* Diner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diner.swift; sourceTree = "<group>"; };
@@ -134,6 +137,7 @@
 		E9DA731B2AEBA8EC005A8C24 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 		E9DA731D2AEBAA7F005A8C24 /* StoreFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreFlow.swift; sourceTree = "<group>"; };
 		E9DA73202AEC27CA005A8C24 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		E9EC2FE92B890EF900604F22 /* MembershipStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipStatus.swift; sourceTree = "<group>"; };
 		E9F26CAA2820114500A2DD79 /* CompositionalLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutViewController.swift; sourceTree = "<group>"; };
 		E9F26CAC282015CE00A2DD79 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -330,12 +334,21 @@
 			path = Slider;
 			sourceTree = "<group>";
 		};
+		E96735332B87CEE3004409C5 /* MembershipStatus */ = {
+			isa = PBXGroup;
+			children = (
+				E96735342B87CFAE004409C5 /* MembershipStatusTableViewCell.swift */,
+			);
+			path = MembershipStatus;
+			sourceTree = "<group>";
+		};
 		E96735362B87D6E8004409C5 /* Local */ = {
 			isa = PBXGroup;
 			children = (
 				E967353F2B87D910004409C5 /* PromoTourModel.swift */,
 				E967353D2B87D8F0004409C5 /* Diner.swift */,
 				E967353A2B87D898004409C5 /* BestGuide.swift */,
+				E9EC2FE92B890EF900604F22 /* MembershipStatus.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -436,6 +449,7 @@
 		E9B40DFE2AE2DFF700AC5FCB /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E96735332B87CEE3004409C5 /* MembershipStatus */,
 				E92073952AE81FA700AE151C /* BestGuide */,
 				E9CC600C2AE6FA2900EFDE03 /* Diner */,
 				E9CC600B2AE6F5A600EFDE03 /* PromoCity */,
@@ -581,6 +595,7 @@
 				E9DA731A2AEBA8DF005A8C24 /* StoreViewController.swift in Sources */,
 				E96735442B87DC67004409C5 /* PhotoCollectionViewCellModel.swift in Sources */,
 				E9325964280C0A9100199960 /* MainViewController.swift in Sources */,
+				E9EC2FEA2B890EF900604F22 /* MembershipStatus.swift in Sources */,
 				E9803A87280DD4EE0097C70E /* ContactTableViewCell.swift in Sources */,
 				E932594E280C058A00199960 /* AppDelegate.swift in Sources */,
 				E9582A9D2AF01EA00050E88F /* DinerViewController.swift in Sources */,
@@ -620,6 +635,7 @@
 				E94B25CF28BDF43000BA530A /* ProductCollectionViewCell.swift in Sources */,
 				E94B25D328BE3CA100BA530A /* Consts.swift in Sources */,
 				E9325973280C1B3800199960 /* BlueButton.swift in Sources */,
+				E96735352B87CFAE004409C5 /* MembershipStatusTableViewCell.swift in Sources */,
 				E97313C42AE3B91300156109 /* PromoCityTableViewCell.swift in Sources */,
 				E928F84C2AE9873D00E44EE1 /* TitleButtonTableViewCell.swift in Sources */,
 				E96735402B87D910004409C5 /* PromoTourModel.swift in Sources */,

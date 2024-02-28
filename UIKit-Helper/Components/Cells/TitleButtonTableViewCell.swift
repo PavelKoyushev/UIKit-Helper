@@ -30,6 +30,9 @@ final class TitleButtonTableViewCell: UITableViewCell, CodeCellConfigurable {
     func configureCell(with model: TitleButtonCellProtocol) {
         
         titleLabel.text = model.title
+        
+        allLabel.isHidden = model.isHiddenButton
+        image.isHidden = model.isHiddenButton
     }
 }
 

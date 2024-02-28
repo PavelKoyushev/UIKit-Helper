@@ -63,11 +63,13 @@ private extension HomeViewController {
             $0.register(cellType: PromoCityTableViewCell.self)
             $0.register(cellType: DinerTableViewCell.self)
             $0.register(cellType: BestGuideTableViewCell.self)
+            $0.register(cellType: MembershipStatusTableViewCell.self)
             $0.backgroundColor = .white
             $0.tableFooterView = UIView()
             $0.showsVerticalScrollIndicator = false
             $0.bounces = true
             $0.separatorStyle = .none
+            $0.tableFooterView = UIView()
             $0.rowHeight = UITableView.automaticDimension
         }
     }

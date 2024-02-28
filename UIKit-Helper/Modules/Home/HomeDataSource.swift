@@ -15,6 +15,7 @@ enum HomeScreenItem {
     case diner(model: [Diner], selected: PublishRelay<Diner>)
     case bestGuide(model: [BestGuide])
     case titleButton(model: TitleButtonCellProtocol)
+    case membershipStatus(model: MembershipStatus)
 }
 
 final class HomeScreenDataSource {
@@ -42,6 +43,10 @@ final class HomeScreenDataSource {
             return CodeCellBuilder<TitleButtonTableViewCell>.build(tableView: tableView,
                                                                    indexPath: indexPath,
                                                                    model: model)
+        case .membershipStatus(model: let model):
+            return CodeCellBuilder<MembershipStatusTableViewCell>.build(tableView: tableView,
+                                                                 indexPath: indexPath,
+                                                                 model: model)
         }
     }
 }
@@ -53,7 +58,8 @@ struct HomeScreenBuilder {
     static func build(promoTour: [PromoTourModel],
                       diner: [Diner],
                       bestGuides: [BestGuide],
-                      selectedDiner: PublishRelay<Diner>) -> [SectionType] {
+                      selectedDiner: PublishRelay<Diner>,
+                      membershipStatus: MembershipStatus) -> [SectionType] {
         
         var items = [HomeScreenItem]()
         
@@ -80,6 +86,15 @@ struct HomeScreenBuilder {
         let bestGuides = HomeScreenItem.bestGuide(model: bestGuides)
         items.append(bestGuidesTitle)
         items.append(bestGuides)
+        
+        let titleStatus = TitleButtonCellModel(title: "Membership status",
+                                               step: .other,
+                                               isHiddenButton: true)
+        let statusTitleItem = HomeScreenItem.titleButton(model: titleStatus)
+        
+        let statusItem = HomeScreenItem.membershipStatus(model: membershipStatus)
+        items.append(statusTitleItem)
+        items.append(statusItem)
         
         let sections = [SectionType(model: "HomeList",
                                     items: items)]

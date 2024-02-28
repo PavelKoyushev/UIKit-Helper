@@ -18,6 +18,7 @@ final class HomeViewModel: Stepper {
     private let tours: [PromoTourModel] = PromoTourModel.mockArray
     private let diners: [Diner] = Diner.mockArray
     private let guides: [BestGuide] = BestGuide.mockArray
+    private let membershipStatus: MembershipStatus = .mock
     
     struct Input {
         let onDidLoad: Observable<Void>
@@ -40,6 +41,7 @@ extension HomeViewModel {
         let popularCities = BehaviorRelay<[PromoTourModel]>(value: [])
         let diners = BehaviorRelay<[Diner]>(value: [])
         let bestGuides = BehaviorRelay<[BestGuide]>(value: [])
+        let status = BehaviorRelay<MembershipStatus>(value: .mock)
         
         let dinerTap = PublishRelay<Diner>()
         
@@ -64,14 +66,22 @@ extension HomeViewModel {
             .bind(to: diners)
             .disposed(by: disposeBag)
         
-        let screen = Observable.combineLatest(popularCities, diners, bestGuides)
+        input.onDidLoad
+            .map { [weak self] in
+                self?.membershipStatus ?? .mock
+            }
+            .bind(to: status)
+            .disposed(by: disposeBag)
+        
+        let screen = Observable.combineLatest(popularCities, diners, bestGuides, status)
         
         screen
             .map {
                 HomeScreenBuilder.build(promoTour: $0.0,
                                         diner: $0.1,
                                         bestGuides: $0.2,
-                                        selectedDiner: dinerTap)
+                                        selectedDiner: dinerTap,
+                                        membershipStatus: $0.3)
             }
             .bind(to: sections)
             .disposed(by: disposeBag)
