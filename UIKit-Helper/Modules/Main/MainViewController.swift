@@ -10,18 +10,24 @@ import SnapKit
 
 final class MainViewController: UIViewController {
     
-    private var oneButton = BlueButton()
+    private let scrollView = UIScrollView()
+    private let stackView = UIStackView()
     
-    private var twoButton = BlueButton()
+    private let goodsButton = BlueButton()
+    private let oneButton = BlueButton()
+    private let twoButton = BlueButton()
+    private let threeButton = BlueButton()
+    private let fourButton = BlueButton()
     
-    private var threeButton = BlueButton()
+    let goodsService = GoodsService(
+        fileProvider: BundleFileProvider(),
+        decoder: JSONDecoderService(),
+        mapper: GoodsMapper()
+    )
     
-    private var fourButton = BlueButton()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
         configureUI()
     }
 }
@@ -29,12 +35,14 @@ final class MainViewController: UIViewController {
 private extension MainViewController {
     
     func configureUI() {
-        
         configureButtons()
+        setupUI()
         makeConstraints()
     }
     
     func configureButtons() {
+        goodsButton.setTitle("Products view", for: .normal)
+        goodsButton.addTarget(self, action: #selector(routeToProductsView), for: .touchUpInside)
         
         oneButton.setTitle("Diffable Data Source", for: .normal)
         oneButton.addTarget(self, action: #selector(routeToDDSView), for: .touchUpInside)
@@ -47,42 +55,48 @@ private extension MainViewController {
         
         fourButton.setTitle("UICollectionViewFlowLayout", for: .normal)
         fourButton.addTarget(self, action: #selector(routeToCVFLViewController), for: .touchUpInside)
+    }
+    
+    func setupUI() {
+        view.addSubview(scrollView)
+        scrollView.addSubview(stackView)
         
-        view.addSubview(oneButton)
-        view.addSubview(twoButton)
-        view.addSubview(threeButton)
-        view.addSubview(fourButton)
+        stackView.axis = .vertical
+        stackView.spacing = 20
+        stackView.alignment = .fill
+        stackView.distribution = .fillEqually
+        
+        [goodsButton, oneButton, twoButton, threeButton, fourButton].forEach {
+            $0.snp.makeConstraints {
+                $0.height.equalTo(40)
+            }
+            stackView.addArrangedSubview($0)
+        }
     }
     
     func makeConstraints() {
-        
-        oneButton.snp.makeConstraints {
-            $0.center.equalToSuperview()
-            $0.height.equalTo(40)
-            $0.horizontalEdges.equalToSuperview().inset(45)
+        scrollView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
         }
         
-        twoButton.snp.makeConstraints {
-            $0.top.equalTo(oneButton.snp.bottom).offset(20)
-            $0.height.equalTo(40)
-            $0.horizontalEdges.equalToSuperview().inset(45)
-        }
-        
-        threeButton.snp.makeConstraints {
-            $0.top.equalTo(twoButton.snp.bottom).offset(20)
-            $0.height.equalTo(40)
-            $0.horizontalEdges.equalToSuperview().inset(45)
-        }
-        
-        fourButton.snp.makeConstraints {
-            $0.top.equalTo(threeButton.snp.bottom).offset(20)
-            $0.height.equalTo(40)
-            $0.horizontalEdges.equalToSuperview().inset(45)
+        stackView.snp.makeConstraints {
+            $0.edges.equalToSuperview().inset(20)
+            $0.width.equalToSuperview().inset(20)
         }
     }
 }
 
 private extension MainViewController {
+    
+    @objc func routeToProductsView() {
+        
+        let viewController = GoodsViewController()
+        let viewModel = GoodsViewModel(goodsService: goodsService)
+        
+        viewController.inject(viewModel: viewModel)
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
     
     @objc func routeToDDSView() {
         
