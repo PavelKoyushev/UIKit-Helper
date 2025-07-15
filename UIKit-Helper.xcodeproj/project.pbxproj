@@ -81,11 +81,25 @@
 		EB2B00802E043C5900C0D2A9 /* GoodsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2B007F2E043C5800C0D2A9 /* GoodsJSON.swift */; };
 		EB2B00832E043DD100C0D2A9 /* SortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2B00822E043DD000C0D2A9 /* SortType.swift */; };
 		EB2B00862E04400000C0D2A9 /* SortingGoodsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2B00852E043FFF00C0D2A9 /* SortingGoodsCellModel.swift */; };
+		EB606BBC2E252A0B00F5188B /* PictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB606BBB2E252A0A00F5188B /* PictureCollectionViewCell.swift */; };
+		EB606BBF2E252A6300F5188B /* PicturesViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB606BBE2E252A6300F5188B /* PicturesViewLayout.swift */; };
+		EB60B8302E216D0F0072D596 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60B82F2E216D0F0072D596 /* PhotosViewController.swift */; };
+		EB60B8372E216DE60072D596 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60B8362E216DE60072D596 /* TagCollectionViewCell.swift */; };
+		EB60B8392E2172F00072D596 /* TrialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60B8382E2172E80072D596 /* TrialView.swift */; };
+		EB7EA5E82E22BBC30088684B /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7EA5E72E22BBBE0088684B /* TagsView.swift */; };
+		EB7EA5EA2E22CF7E0088684B /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7EA5E92E22CF790088684B /* Array+Ext.swift */; };
 		EBBEC06D2E05377F005A6932 /* GoodsTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBEC06C2E05377E005A6932 /* GoodsTableViewCellModel.swift */; };
 		EBBEC0722E0542C9005A6932 /* BundleFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBEC0712E0542C8005A6932 /* BundleFileProvider.swift */; };
 		EBBEC0742E054335005A6932 /* JSONDecoderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBEC0732E054330005A6932 /* JSONDecoderService.swift */; };
 		EBBEC0762E054382005A6932 /* GoodsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBEC0752E054380005A6932 /* GoodsMapper.swift */; };
 		EBBEC0792E05442B005A6932 /* GoodsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBEC0782E054420005A6932 /* GoodsService.swift */; };
+		EBCEDC102E23EC00004655C8 /* PicturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCEDC0F2E23EBF8004655C8 /* PicturesView.swift */; };
+		EBD156822E263033005A359F /* PhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD156812E263030005A359F /* PhotosPresenter.swift */; };
+		EBD157262E263CF4005A359F /* PhotosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD157252E263CF3005A359F /* PhotosInteractor.swift */; };
+		EBD157292E263D39005A359F /* FreeTrialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD157282E263D38005A359F /* FreeTrialModel.swift */; };
+		EBD1572B2E263D60005A359F /* PictureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD1572A2E263D5F005A359F /* PictureModel.swift */; };
+		EBD1572D2E263D72005A359F /* TagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD1572C2E263D72005A359F /* TagModel.swift */; };
+		EBD1572F2E263DAE005A359F /* PhotosScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD1572E2E263DAC005A359F /* PhotosScreenModel.swift */; };
 		EBDCD6E42E03242C00FD8049 /* GoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDCD6E32E03242C00FD8049 /* GoodsViewController.swift */; };
 		EBDCD6E62E03244800FD8049 /* GoodsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDCD6E52E03244200FD8049 /* GoodsViewModel.swift */; };
 		EBDCD6E92E0324DD00FD8049 /* GoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDCD6E82E0324DD00FD8049 /* GoodsTableViewCell.swift */; };
@@ -165,11 +179,25 @@
 		EB2B007F2E043C5800C0D2A9 /* GoodsJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsJSON.swift; sourceTree = "<group>"; };
 		EB2B00822E043DD000C0D2A9 /* SortType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortType.swift; sourceTree = "<group>"; };
 		EB2B00852E043FFF00C0D2A9 /* SortingGoodsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingGoodsCellModel.swift; sourceTree = "<group>"; };
+		EB606BBB2E252A0A00F5188B /* PictureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionViewCell.swift; sourceTree = "<group>"; };
+		EB606BBE2E252A6300F5188B /* PicturesViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesViewLayout.swift; sourceTree = "<group>"; };
+		EB60B82F2E216D0F0072D596 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		EB60B8362E216DE60072D596 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
+		EB60B8382E2172E80072D596 /* TrialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialView.swift; sourceTree = "<group>"; };
+		EB7EA5E72E22BBBE0088684B /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		EB7EA5E92E22CF790088684B /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		EBBEC06C2E05377E005A6932 /* GoodsTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsTableViewCellModel.swift; sourceTree = "<group>"; };
 		EBBEC0712E0542C8005A6932 /* BundleFileProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleFileProvider.swift; sourceTree = "<group>"; };
 		EBBEC0732E054330005A6932 /* JSONDecoderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderService.swift; sourceTree = "<group>"; };
 		EBBEC0752E054380005A6932 /* GoodsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsMapper.swift; sourceTree = "<group>"; };
 		EBBEC0782E054420005A6932 /* GoodsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsService.swift; sourceTree = "<group>"; };
+		EBCEDC0F2E23EBF8004655C8 /* PicturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesView.swift; sourceTree = "<group>"; };
+		EBD156812E263030005A359F /* PhotosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPresenter.swift; sourceTree = "<group>"; };
+		EBD157252E263CF3005A359F /* PhotosInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosInteractor.swift; sourceTree = "<group>"; };
+		EBD157282E263D38005A359F /* FreeTrialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTrialModel.swift; sourceTree = "<group>"; };
+		EBD1572A2E263D5F005A359F /* PictureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureModel.swift; sourceTree = "<group>"; };
+		EBD1572C2E263D72005A359F /* TagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagModel.swift; sourceTree = "<group>"; };
+		EBD1572E2E263DAC005A359F /* PhotosScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosScreenModel.swift; sourceTree = "<group>"; };
 		EBDCD6E32E03242C00FD8049 /* GoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsViewController.swift; sourceTree = "<group>"; };
 		EBDCD6E52E03244200FD8049 /* GoodsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsViewModel.swift; sourceTree = "<group>"; };
 		EBDCD6E82E0324DD00FD8049 /* GoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsTableViewCell.swift; sourceTree = "<group>"; };
@@ -299,6 +327,7 @@
 				E9608BA32AEFF44B00B28A43 /* Diners */,
 				E9247F1928108F23007212A9 /* Main */,
 				EBDCD6E22E0323FD00FD8049 /* Goods */,
+				EB60B82E2E216CCE0072D596 /* Photos */,
 				E9247F1A28108F2C007212A9 /* Examples */,
 			);
 			path = Modules;
@@ -307,6 +336,7 @@
 		E9325965280C0B9100199960 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EB606BBD2E252A5B00F5188B /* FlowLayouts */,
 				EB2B007B2E0438CB00C0D2A9 /* PopUp */,
 				E9DA731F2AEC277E005A8C24 /* Views */,
 				E9653F5328BCE7850027497B /* Slider */,
@@ -388,6 +418,7 @@
 		E96735362B87D6E8004409C5 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				EBD157272E263D32005A359F /* Photos */,
 				EB2B00812E043C6B00C0D2A9 /* Goods */,
 				E967353F2B87D910004409C5 /* PromoTourModel.swift */,
 				E967353D2B87D8F0004409C5 /* Diner.swift */,
@@ -424,6 +455,7 @@
 		E9803A85280DD4D20097C70E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EB60B8352E216DD10072D596 /* Photos */,
 				EBDCD6E72E0324B300FD8049 /* Goods */,
 				E9B40DFE2AE2DFF700AC5FCB /* Home */,
 				E9803A86280DD4EE0097C70E /* ContactTableViewCell.swift */,
@@ -536,8 +568,11 @@
 		E9DA731F2AEC277E005A8C24 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EBCEDC0F2E23EBF8004655C8 /* PicturesView.swift */,
+				EB7EA5E72E22BBBE0088684B /* TagsView.swift */,
 				EB2B00602E04290700C0D2A9 /* PriceView.swift */,
 				E9DA73202AEC27CA005A8C24 /* RatingView.swift */,
+				EB60B8382E2172E80072D596 /* TrialView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -553,6 +588,7 @@
 		EB2B007E2E043C1400C0D2A9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EB7EA5E92E22CF790088684B /* Array+Ext.swift */,
 				EB2B005C2E03FE1200C0D2A9 /* UIScreen+Ext.swift */,
 			);
 			path = Extensions;
@@ -607,6 +643,33 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		EB606BBD2E252A5B00F5188B /* FlowLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				EB606BBE2E252A6300F5188B /* PicturesViewLayout.swift */,
+			);
+			path = FlowLayouts;
+			sourceTree = "<group>";
+		};
+		EB60B82E2E216CCE0072D596 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				EBD157252E263CF3005A359F /* PhotosInteractor.swift */,
+				EBD156812E263030005A359F /* PhotosPresenter.swift */,
+				EB60B82F2E216D0F0072D596 /* PhotosViewController.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		EB60B8352E216DD10072D596 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				EB606BBB2E252A0A00F5188B /* PictureCollectionViewCell.swift */,
+				EB60B8362E216DE60072D596 /* TagCollectionViewCell.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
 		EBBEC06E2E054295005A6932 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -639,6 +702,17 @@
 				EBBEC0712E0542C8005A6932 /* BundleFileProvider.swift */,
 			);
 			path = Bundle;
+			sourceTree = "<group>";
+		};
+		EBD157272E263D32005A359F /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				EBD1572E2E263DAC005A359F /* PhotosScreenModel.swift */,
+				EBD1572C2E263D72005A359F /* TagModel.swift */,
+				EBD1572A2E263D5F005A359F /* PictureModel.swift */,
+				EBD157282E263D38005A359F /* FreeTrialModel.swift */,
+			);
+			path = Photos;
 			sourceTree = "<group>";
 		};
 		EBDCD6E22E0323FD00FD8049 /* Goods */ = {
@@ -761,12 +835,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9B1576D2ADDC7FA005458D7 /* AppStep.swift in Sources */,
+				EB60B8302E216D0F0072D596 /* PhotosViewController.swift in Sources */,
 				E96735422B87DC4C004409C5 /* ProductCellModel.swift in Sources */,
 				E99DB8CD28BE425A00D323F5 /* PizzaFlowLayout.swift in Sources */,
 				EB2B00832E043DD100C0D2A9 /* SortType.swift in Sources */,
 				E9873F9228BCC79700F6525D /* MainTextField.swift in Sources */,
 				E9653F5028BCDD130027497B /* MainTextView.swift in Sources */,
+				EBD157262E263CF4005A359F /* PhotosInteractor.swift in Sources */,
+				EBD156822E263033005A359F /* PhotosPresenter.swift in Sources */,
 				E9F26CAB2820114500A2DD79 /* CompositionalLayoutViewController.swift in Sources */,
+				EBD1572B2E263D60005A359F /* PictureModel.swift in Sources */,
 				E914CA2F2ADA74F7000478DA /* Manager.swift in Sources */,
 				EBDCD6ED2E03292700FD8049 /* GoodeDataSource.swift in Sources */,
 				E9608BA22AEFE1DF00B28A43 /* OtherFlow.swift in Sources */,
@@ -775,11 +853,13 @@
 				E9DA731A2AEBA8DF005A8C24 /* StoreViewController.swift in Sources */,
 				E96735442B87DC67004409C5 /* PhotoCollectionViewCellModel.swift in Sources */,
 				E9325964280C0A9100199960 /* MainViewController.swift in Sources */,
+				EB60B8392E2172F00072D596 /* TrialView.swift in Sources */,
 				EBDCD6E62E03244800FD8049 /* GoodsViewModel.swift in Sources */,
 				E9EC2FEA2B890EF900604F22 /* MembershipStatus.swift in Sources */,
 				E9803A87280DD4EE0097C70E /* ContactTableViewCell.swift in Sources */,
 				EB2B005B2E03FDDB00C0D2A9 /* GoodsPopupViewController.swift in Sources */,
 				E932594E280C058A00199960 /* AppDelegate.swift in Sources */,
+				EBD157292E263D39005A359F /* FreeTrialModel.swift in Sources */,
 				EB2B005D2E03FE1600C0D2A9 /* UIScreen+Ext.swift in Sources */,
 				EBBEC0742E054335005A6932 /* JSONDecoderService.swift in Sources */,
 				E9582A9D2AF01EA00050E88F /* DinerViewController.swift in Sources */,
@@ -789,6 +869,7 @@
 				E9653F5528BCE7A90027497B /* AppSlider.swift in Sources */,
 				EB2B00862E04400000C0D2A9 /* SortingGoodsCellModel.swift in Sources */,
 				EBDCD6F12E032F7700FD8049 /* GoodsScreenBuilder.swift in Sources */,
+				EBD1572D2E263D72005A359F /* TagModel.swift in Sources */,
 				E9DA731E2AEBAA7F005A8C24 /* StoreFlow.swift in Sources */,
 				E9247F1828108F17007212A9 /* ExampleDDSViewController.swift in Sources */,
 				E9DA731C2AEBA8EC005A8C24 /* StoreViewModel.swift in Sources */,
@@ -809,17 +890,23 @@
 				E962F57C2AFD440300B72A60 /* DinerDataSource.swift in Sources */,
 				E9A95D492AFD20D2004B5C25 /* ImageTableViewCell.swift in Sources */,
 				E94497132AF3C61D00D1D960 /* DinerViewModel.swift in Sources */,
+				EB7EA5E82E22BBC30088684B /* TagsView.swift in Sources */,
 				E9DA73212AEC27CA005A8C24 /* RatingView.swift in Sources */,
+				EBD1572F2E263DAE005A359F /* PhotosScreenModel.swift in Sources */,
+				EBCEDC102E23EC00004655C8 /* PicturesView.swift in Sources */,
 				E9295DBD28204A4E007A83F0 /* Developer.swift in Sources */,
+				EB606BBC2E252A0B00F5188B /* PictureCollectionViewCell.swift in Sources */,
 				E9325950280C058A00199960 /* SceneDelegate.swift in Sources */,
 				E967353B2B87D898004409C5 /* BestGuide.swift in Sources */,
 				E94B25CD28BDF08A00BA530A /* CVFLViewController.swift in Sources */,
 				EB2B00802E043C5900C0D2A9 /* GoodsJSON.swift in Sources */,
 				E9247F1D28109DAA007212A9 /* CellBuilder.swift in Sources */,
+				EB7EA5EA2E22CF7E0088684B /* Array+Ext.swift in Sources */,
 				E9B157742ADDCAEF005458D7 /* HomeViewModel.swift in Sources */,
 				EBDCD6EB2E0326E600FD8049 /* SortingGoodsTableViewCell.swift in Sources */,
 				EBBEC0722E0542C9005A6932 /* BundleFileProvider.swift in Sources */,
 				EBBEC06D2E05377F005A6932 /* GoodsTableViewCellModel.swift in Sources */,
+				EB606BBF2E252A6300F5188B /* PicturesViewLayout.swift in Sources */,
 				E967353E2B87D8F0004409C5 /* Diner.swift in Sources */,
 				E9608BA52AEFF49800B28A43 /* DinersListViewController.swift in Sources */,
 				E96735392B87D863004409C5 /* TitleButtonCellModel.swift in Sources */,
@@ -827,6 +914,7 @@
 				E9AF60E92AE9569700A8AAFA /* BestGuidesFlowLayout.swift in Sources */,
 				E9B157692ADDC7BE005458D7 /* AppFlow.swift in Sources */,
 				E94B25CF28BDF43000BA530A /* ProductCollectionViewCell.swift in Sources */,
+				EB60B8372E216DE60072D596 /* TagCollectionViewCell.swift in Sources */,
 				E94B25D328BE3CA100BA530A /* Consts.swift in Sources */,
 				E9325973280C1B3800199960 /* BlueButton.swift in Sources */,
 				E96735352B87CFAE004409C5 /* MembershipStatusTableViewCell.swift in Sources */,

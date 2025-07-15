@@ -18,6 +18,7 @@ final class MainViewController: UIViewController {
     private let twoButton = BlueButton()
     private let threeButton = BlueButton()
     private let fourButton = BlueButton()
+    private let fiveButton = BlueButton()
     
     let goodsService = GoodsService(
         fileProvider: BundleFileProvider(),
@@ -55,6 +56,9 @@ private extension MainViewController {
         
         fourButton.setTitle("UICollectionViewFlowLayout", for: .normal)
         fourButton.addTarget(self, action: #selector(routeToCVFLViewController), for: .touchUpInside)
+        
+        fiveButton.setTitle("PhotosViewController", for: .normal)
+        fiveButton.addTarget(self, action: #selector(routeToPhotosView), for: .touchUpInside)
     }
     
     func setupUI() {
@@ -66,7 +70,7 @@ private extension MainViewController {
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
         
-        [goodsButton, oneButton, twoButton, threeButton, fourButton].forEach {
+        [goodsButton, oneButton, twoButton, threeButton, fourButton, fiveButton].forEach {
             $0.snp.makeConstraints {
                 $0.height.equalTo(40)
             }
@@ -124,5 +128,20 @@ private extension MainViewController {
         let viewController = CVFLViewController()
         
         present(viewController, animated: true)
+    }
+    
+    @objc func routeToPhotosView() {
+        
+        let controller = PhotosViewController()
+        let interactor = PhotosInteractor()
+        let presenter = PhotosPresenter()
+        
+        controller.interactor = interactor
+        interactor.presenter = presenter
+        presenter.viewController = controller
+        
+        controller.hidesBottomBarWhenPushed = true
+        
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
