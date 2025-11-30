@@ -30,6 +30,10 @@ private extension DinerInfoTableViewCell {
     
     func configureUI() {
         
+        contentView.do {
+            $0.backgroundColor = .white
+        }
+        
         title.do {
             $0.font = .systemFont(ofSize: 16, weight: .bold)
             $0.textColor = .black

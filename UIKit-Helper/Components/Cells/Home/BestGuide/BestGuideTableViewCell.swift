@@ -48,6 +48,7 @@ private extension BestGuideTableViewCell {
             $0.bounces = true
             $0.isScrollEnabled = true
             $0.showsHorizontalScrollIndicator = false
+            $0.backgroundColor = .white
         }
     }
     
