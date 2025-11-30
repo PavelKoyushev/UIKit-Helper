@@ -9,18 +9,12 @@ import UIKit
 
 final class UIKitViewController: UIViewController {
     
-    var textField = MainTextField()
-    var textEditor = MainTextView(frame: .zero)
-    var slider = AppSlider()
+    private let textField = MainTextField()
+    private let textEditor = MainTextView(frame: .zero)
+    private let slider = AppSlider()
+    private let label = UILabel()
+    private let animatedButton = AnimatedButton()
     
-    var label: UILabel = {
-        let label = UILabel()
-        label.textColor = .blue
-        label.font = .systemFont(ofSize: 16, weight: .regular)
-        label.textAlignment = .center
-        return label
-    }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -40,13 +34,17 @@ private extension UIKitViewController {
     
     func configureViews() {
         
+        label.textColor = .blue
+        label.font = .systemFont(ofSize: 16, weight: .regular)
+        label.textAlignment = .center
+    }
+    
+    func makeConstraints() {
         view.addSubview(textField)
         view.addSubview(textEditor)
         view.addSubview(label)
         view.addSubview(slider)
-    }
-    
-    func makeConstraints() {
+        view.addSubview(animatedButton)
         
         textField.snp.makeConstraints {
             $0.top.equalToSuperview().offset(20)
@@ -71,6 +69,12 @@ private extension UIKitViewController {
             $0.height.equalTo(20)
             $0.horizontalEdges.equalToSuperview().inset(45)
         }
+        
+        animatedButton.snp.makeConstraints {
+            $0.top.equalTo(slider.snp.bottom).offset(30)
+            $0.height.equalTo(50)
+            $0.horizontalEdges.equalToSuperview().inset(30)
+        }
     }
 }
 
@@ -79,19 +83,25 @@ private extension UIKitViewController {
     func setupViews() {
         setupView()
         setupSlider()
+        setupButton()
     }
     
     func setupView() {
-        
         let tapGesture = UITapGestureRecognizer(target: self,
                                                 action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(tapGesture)
     }
     
     func setupSlider() {
-        
         label.text = String(Int(slider.value))
         slider.addTarget(self, action: #selector(sliderValueDidChange), for: .valueChanged)
+    }
+    
+    func setupButton() {
+        animatedButton.setTitle("Continue")
+        animatedButton.onButtonTap = {
+            print("Continue tapped!")
+        }
     }
 }
 
